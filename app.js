@@ -14,9 +14,19 @@ const loadTemp = city =>{
  
     const temperature = document.getElementById('tempu');
     temperature.innerText = data.main.temp;
-     console.log(data.main.temp);
+     console.log(data.weather[0].main);
+   // setInnerTextByID('tempu',data.main.tempu);
+   setInnerTextByID('conditions', data.weather[0].main);
 
  }
+
+  const setInnerTextByID = (id,text) =>{
+
+
+
+    const temperature = document.getElementById(id);
+    temperature.innerText = text;
+  }
 
  document.getElementById('btn-search').addEventListener('click',function(){
 
