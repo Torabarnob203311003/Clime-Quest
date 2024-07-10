@@ -17,4 +17,19 @@ const loadTemp = city =>{
      console.log(data.main.temp);
 
  }
+
+ document.getElementById('btn-search').addEventListener('click',function(){
+
+  const searchFeild = document.getElementById('search-feild');
+  const city = searchFeild.value ;
+  //set city name
+
+   document.getElementById('city').innerText= city;
+
+  loadTemp(city);
+//   const cityName = document.getElementById('search-cityname');
+//    cityName = searchFeild.innerText;
+
+
+ })
 loadTemp('dhaka');
